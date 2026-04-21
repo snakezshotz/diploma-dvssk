@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=./index.html">
+    <title>Выход</title>
+    <script>
+        fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
+            .finally(() => {
+                window.location.href = './index.html';
+            });
+    </script>
+</head>
+<body>
+    <p>Выход из системы...</p>
+</body>
+</html>
